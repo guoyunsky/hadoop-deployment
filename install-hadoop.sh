@@ -349,6 +349,9 @@ function clean(){
 	if [ -d "${BASE_DIR}/dependency/${LZO_PACKAGE}" ]; then
 		rm -rf "${BASE_DIR}/dependency/${LZO_PACKAGE}"
 	fi
+
+	cd "${BASE_DIR}/dependency/HADOOP_LZO_PACKAGE"
+	ant clean
 }
 
 
