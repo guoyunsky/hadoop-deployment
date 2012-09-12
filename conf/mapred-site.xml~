@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+	<property>
+    	<name>mapred.job.tracker</name>
+    	<value>http://master:9001</value>
+	</property>
+	<property>  
+   		<!-- map/reduce的系统目录（使用的HDFS的路径） -->  
+    	<name>mapred.system.dir</name>  
+    	<value>/opt/hadoop/datas/system</value>  
+	</property>  
+	<property>  
+    	<!-- map/reduce的临时目录（可使用“,”隔开，设置多重路径来分摊磁盘IO） -->  
+    	<name>mapred.local.dir</name>  
+    	<value>/opt/hadoop/datas/mapred-local</value>  
+	</property> 
+
+	<property>  
+		<name>mapreduce.map.output.compress</name>  
+		<value>true</value>  
+	</property> 
+	<property>  
+		<name>mapred.child.env</name>  
+		<value>JAVA_LIBRARY_PATH=/opt/hadoop/current/lib/native/Linux-amd64-64</value>  
+	</property> 
+	<property>  
+		<name>mapreduce.map.output.compress.codec</name>  
+		<value>com.hadoop.compression.lzo.LzoCodec</value>
+	</property>	
+
+</configuration>

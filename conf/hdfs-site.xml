@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+<property>  
+	<!-- DFS中存储文件命名空间信息的目录 -->  
+    <name>dfs.name.dir</name>  
+    <value>/opt/hadoop/datas/name</value>  
+</property>  
+<property>  
+    <!-- DFS中存储文件数据的目录 -->  
+    <name>dfs.data.dir</name>   
+    <value>/opt/hadoop/datas/data</value>  
+</property>  
+<property>  
+    <!-- 是否对DFS中的文件进行权限控制(测试中一般用false)-->  
+    <name>dfs.permissions</name>  
+    <value>false</value>  
+</property>  
+<property>
+    <name>dfs.replication</name>
+    <value>1</value>
+</property> 
+</configuration>
